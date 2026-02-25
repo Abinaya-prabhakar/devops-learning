@@ -1,2 +1,16 @@
-My first Git file
-Adding more content
+  •	Mon: Linux basics – file navigation, permissions. Hands-on: create users, groups.
+
+1.mkdir devops
+2.cd devops
+3.vi test.txt
+4.chmod 644 .txt
+5.chown .txt
+6.sudo adduser devops
+A server is running out of disk space. Which commands do you use to identify large files?
+A:
+•	df -h → shows disk usage.
+•	du -sh * → shows folder sizes.
+•	find / -type f -size +100M → finds files larger than 100MB.
+
+•	Interview tip: Mention log rotation or archiving to cloud storage as a solution.
+

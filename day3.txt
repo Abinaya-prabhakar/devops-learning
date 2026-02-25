@@ -1,0 +1,52 @@
+# Install Git
+sudo apt update
+sudo apt install git -y
+
+# Configure identity
+git config --global user.name "Abinaya"
+git config --global user.email "your_email@example.com"
+
+# Check configuration
+git config --list
+# Initialize a new repository
+git init
+
+# Clone an existing repository
+git clone <repo_url>
+
+# Show current repo status
+git status# Add a file to staging
+git add filename
+
+# Add all files
+git add .
+
+# Commit staged changes
+git commit -m "Commit message"
+
+# Show commit history
+git log --oneline# Show unstaged changes
+git diff
+
+# Show staged changes
+git diff --cached
+
+# Show details of last commit
+git show HEAD
+# List branches
+git branch
+
+# Create a branch
+git branch feature-1
+
+# Switch to branch
+git checkout feature-1
+
+# Create and switch in one step
+git checkout -b feature-2
+
+# Delete a branch (safe)
+git branch -d branch_name
+
+# Delete a branch (force)
+git branch -D branch_name:

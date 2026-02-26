@@ -1,0 +1,28 @@
+mkdir day4-ci-cd && cd day4-ci-cd
+git init
+echo "Hello DevOps" > app.txt
+git add app.txt
+git commit -m "Initial commit"
+git remote add origin https://github.com/Abinaya-prabhakar/day4-ci-cd.git
+git push -u origin main
+git checkout -b feature-hello
+echo "This is a new feature" >> app.txt
+git add app.txt
+git commit -m "Added feature line"
+git push origin feature-hello
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - feature-hello
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run test script
+        run: echo "Pipeline triggered successfully!"

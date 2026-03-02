@@ -1,0 +1,8 @@
+- Focused on multi‑stage CI/CD pipeline setup.
+- Worked through Node.js + npm installation issues and learned how to fix PATH, permissions, and JSON errors.
+- Practiced editing package.json to add test, lint, and build scripts.
+- Created and ran Jest test cases (one pass, one intentional fail) to validate pipeline behavior.
+- Documented troubleshooting steps and solutions for installer errors, execution policies, and file locks.
+
+This captures your persistence and the technical milestones you hit today.
+Would you like me to also prepare a short “reflection line” (like “Faced setbacks but learned how to debug npm errors step by step”) so your record shows both progress and mindset?

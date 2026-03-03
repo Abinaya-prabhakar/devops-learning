@@ -1,0 +1,6 @@
+• 	✅ Install Java, Git, Jenkins on Ubuntu
+• 	✅ Login and configure Jenkins (plugins, admin user)
+• 	✅ Create first pipeline job with Jenkinsfile
+• 	✅ Connect Jenkins to GitHub repo
+• 	✅ Fix branch mismatch ( vs )
+• 	✅ Enable Poll SCM for automation

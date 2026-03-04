@@ -1,0 +1,19 @@
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
+# List running containers
+sudo docker ps
+
+# List all containers (including stopped)
+sudo docker ps -a
+
+# List downloaded images
+sudo docker images
+
+# Remove a container
+sudo docker rm <container_id>
+
+# Remove an image
+sudo docker rmi <image_id>

@@ -1,4 +1,5 @@
+# Day 9 Dockerfile
 FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y curl
-CMD ["echo", "Hello from Day 9 Docker container!"]
+CMD ["echo", "Hello from my custom Docker image!"]
 

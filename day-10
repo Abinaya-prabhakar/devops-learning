@@ -1,0 +1,42 @@
+ Day 10 – Jenkins Pipeline Setup
+✅ Achievements
+- Successfully installed Jenkins in Docker (jenkins/jenkins:lts) with persistent volume mapping.
+- Retrieved the initialAdminPassword from /home/abinaya/jenkins_home/secrets/initialAdminPassword.
+- Logged into Jenkins UI at http://localhost:9090 and completed setup.
+- Installed required plugins: Pipeline, Docker Pipeline, Docker Commons, Docker API.
+- Created and executed first Pipeline job using a Jenkinsfile from GitHub.
+
+🛠 Troubleshooting Journey
+- Faced port conflicts on 8080 → resolved by switching to 9090.
+- Jenkins container exited immediately → fixed by correcting volume permissions (chown -R 1000:1000).
+- initialAdminPassword not found inside container → solved by checking mounted host directory.
+- Pipeline failed with Invalid agent type "docker" → resolved by installing Docker Pipeline plugin.
+
+📒 Sample Jenkinsfile (Working Version)
+pipeline {
+    agent {
+        docker {
+            image 'ubuntu:20.04'
+            args '-u root'
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello from Jenkins Pipeline running inside Docker!"'
+                sh 'ls -la'
+            }
+        }
+    }
+}
+
+
+
+🎯 Lessons Learned
+- Always check container logs (docker logs jenkins) for startup issues.
+- Jenkins secrets are stored in the mounted host directory, not inside the container if it exits.
+- Pipeline features like agent { docker { ... } } require specific plugins.
+- Documenting errors and fixes builds a strong DevOps portfolio.
+
+This gives you a professional, structured log showing both your successes and your problem-solving process.
+Would you like me to also draft a Day 11 plan section (next steps: Jenkinsfile with GitHub integration + simple CI/CD pipeline), so your repo shows continuity in your learning journey?

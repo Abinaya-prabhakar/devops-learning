@@ -3,21 +3,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/abinaya-yourrepo.git'
+                git 'https://github.com/Abinaya-prabhakar/devops-learning.git'
             }
         }
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh 'docker build -t day11-app .'
-                }
+                sh 'docker build -t day11-app .'
             }
         }
         stage('Run Container') {
             steps {
-                script {
-                    sh 'docker run --rm day11-app'
-                }
+                sh 'docker run --rm day11-app'
             }
         }
     }

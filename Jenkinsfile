@@ -1,15 +1,23 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu:20.04'
-            args '-u root'   // optional: run as root
-        }
-    }
+    agent any
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                sh 'echo "Hello from Jenkins running inside Docker!"'
-                sh 'ls -la'
+                git 'https://github.com/abinaya-yourrepo.git'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh 'docker build -t day11-app .'
+                }
+            }
+        }
+        stage('Run Container') {
+            steps {
+                script {
+                    sh 'docker run --rm day11-app'
+                }
             }
         }
     }

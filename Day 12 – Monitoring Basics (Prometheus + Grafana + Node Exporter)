@@ -1,0 +1,4 @@
+- Successfully deployed a local monitoring stack.
+- Learned how to debug YAML errors and container startup issues.
+- Grafana dashboard now visualizes system metrics.
+- Documented setup steps, configs, and troubleshooting in GitHub.

@@ -1,0 +1,4 @@
+- A containerized Python app deployed via Docker Compose.
+- Jenkins pipeline automating build + deploy.
+- Monitoring stack ready to scrape metrics.
+- Documentation + diagram in GitHub.

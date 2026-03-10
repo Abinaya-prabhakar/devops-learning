@@ -1,0 +1,4 @@
+	Jenkins pipelines can be defined as code ().
+• 	Docker integration requires mounting the host’s Docker socket into Jenkins.
+• 	CI/CD workflow: SCM → Build → Run → Output.
+• 	Importance of correct build context ().

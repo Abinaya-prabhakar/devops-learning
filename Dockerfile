@@ -1,4 +1,16 @@
-FROM ubuntu:20.04
-RUN apt-get update && apt-get install -y curl
-CMD ["echo", "Hello from Day 11 pipeline!"]
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        sh 'docker build -t day13-app .'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'docker-compose up -d'
+      }
+    }
+  }
+}
 

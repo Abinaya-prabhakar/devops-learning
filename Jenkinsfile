@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
-                git 'https://github.com/Abinaya-prabhakar/devops-learning.git'
+                sh 'docker build -t day14-app .'
             }
         }
-        stage('Build Docker Image') {
+        stage('Test') {
             steps {
-                sh 'docker build -t day11-app .'
+                sh 'echo "Running tests..."'
             }
         }
-        stage('Run Container') {
+        stage('Deploy') {
             steps {
-                sh 'docker run --rm day11-app'
+                sh 'docker run -d -p 3000:3000 day14-app'
             }
         }
     }

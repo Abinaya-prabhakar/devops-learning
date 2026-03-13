@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t day14-app .'
+                sh 'docker build -t day14-app -f day13-app/Dockerfile day13-app'
             }
         }
         stage('Test') {

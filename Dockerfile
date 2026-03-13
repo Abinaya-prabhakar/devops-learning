@@ -1,16 +1,7 @@
-pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        sh 'docker build -t day13-app .'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        sh 'docker-compose up -d'
-      }
-    }
-  }
-}
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+CMD ["npm", "start"]
 

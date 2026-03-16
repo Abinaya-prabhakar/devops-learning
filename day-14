@@ -1,0 +1,6 @@
+# Day 14 Notes
+- Learned CI/CD basics with Jenkins.  
+- Faced error: `npm not found`, fixed using Docker agent.  
+- Documented workflow: Developer → GitHub → Jenkins → Monitoring.  
+- Next step: add Docker build stage for app deployment.
+

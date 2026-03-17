@@ -1,0 +1,3 @@
+- Jenkins pipeline syntax (pipeline { stages { ... } }).
+- Docker image lifecycle (build, tag, push).
+- Prometheus scraping + Grafana dashboard

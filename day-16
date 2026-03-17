@@ -1,0 +1,2 @@
+🔹 Objective
+Set up Jenkins locally on Ubuntu without relying on apt repositories (due to GPG key conflicts). Ensure Jenkins runs reliably for CI/CD practice.

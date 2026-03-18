@@ -1,0 +1,7 @@
+day19-project/
+├── terraform/
+│   └── main.tf
+├── ansible/
+│   ├── inventory.ini
+│   └── playbook.yml
+└── README.md
